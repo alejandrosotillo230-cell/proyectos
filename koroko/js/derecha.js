@@ -21,7 +21,6 @@ export function reproducirLetra() {
         { texto: "No me puedo controlar, yo te tengo que borrar", duracion: 3500 },
         { texto: "Fue tan bonito y hecho pedazos", duracion: 3500 },
         { texto: "...", duracion: 30000 },
-        { texto: "Lo siento mi niño", duracion: 8000, overlay: true, overlayDuracion: 5000 }
     ];
 
     let tiempo = 0;
