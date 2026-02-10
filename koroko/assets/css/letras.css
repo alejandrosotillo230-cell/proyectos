@@ -1,0 +1,84 @@
+#frase-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.frase {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #fff;
+
+    opacity: 0;
+    filter: blur(10px);
+
+    text-shadow:
+        0 0 5px currentColor,
+        0 0 15px currentColor,
+        0 0 30px currentColor;
+
+    animation:
+        aparecer 1s ease forwards,
+        desaparecer 1s ease forwards 3s;
+}
+
+/* animaciones */
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes desaparecer {
+    to {
+        opacity: 0;
+        filter: blur(12px);
+    }
+}
+
+#mensaje-derecha {
+    z-index: 10;
+    font-size: 2.5rem;
+    filter: blur(12px);
+    transition: opacity 1s ease, filter 1s ease;
+}
+
+#mensaje-derecha.mostrar {
+    z-index: 10;
+    opacity: 1;
+    filter: blur(0);
+    text-shadow:
+        0 0 5px currentColor,
+        0 0 15px currentColor,
+        0 0 30px currentColor;
+}
+
+#mensaje-derecha,
+#mensaje-derecha-overlay {
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Playfair Display', serif;
+    color: white;
+    text-align: center;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+#mensaje-derecha-overlay {
+    z-index: 10;
+    font-size: 3.3rem;
+    filter: blur(1px);
+    transition: opacity 0.8s ease;
+}
+
+#mensaje-derecha-overlay.mostrar {
+    z-index: 10;
+    opacity: 0.35;
+}

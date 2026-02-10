@@ -1,0 +1,47 @@
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 1;
+    /* visible desde el inicio */
+    transition: opacity 0.8s ease;
+
+    z-index: 1;
+    /* debajo del corazón al inicio */
+    pointer-events: none;
+}
+
+.frase-fondo {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, 0.15);
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.25);
+
+    opacity: 0;
+    filter: blur(12px);
+
+    animation:
+        aparecer-fondo 1.2s ease forwards,
+        desaparecer-fondo 1s ease forwards 3s;
+
+    z-index: 1;
+}
+
+@keyframes aparecer-fondo {
+    to {
+        opacity: 1;
+        filter: blur(4px);
+    }
+}
+
+@keyframes desaparecer-fondo {
+    to {
+        opacity: 0;
+        filter: blur(20px);
+    }
+}

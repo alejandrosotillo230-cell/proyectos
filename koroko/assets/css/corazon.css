@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    background-image: url("/assets/img/background.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+/* CORAZÓN */
+.corazon {
+    width: 300px;
+    aspect-ratio: 1;
+
+    background: radial-gradient(circle at 30% 30%,
+            #ff7b7b,
+            #ff0033 60%,
+            #b3001b);
+
+    clip-path: shape(from 50% 91%,
+            line to 90% 50%,
+            arc to 50% 9% of 1%,
+            arc to 10% 50% of 1%);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    box-shadow:
+        0 0 20px #ff0033,
+        0 0 40px #ff0033,
+        0 0 80px rgba(255, 0, 51, 0.7);
+
+    animation: latido 1.3s infinite ease-in-out;
+    transition: transform 0.8s ease;
+
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+}
+
+/* cuando se toca */
+.corazon.activo {
+    --scale: 2;
+    animation: none;
+    transform: translate(-50%, -50%) scale(2);
+    animation: none;
+}
+
+/* latido */
+@keyframes latido {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.12);
+    }
+}
+
+/* al tocar */
+.corazon.activo {
+    transform: translate(-50%, -50%) scale(2);
+    animation: none;
+}
+
+/* OVERLAY */
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 1;
+    /* visible desde el inicio */
+    transition: opacity 0.8s ease;
+
+    z-index: 1;
+    /* debajo del corazón al inicio */
+    pointer-events: none;
+}
+
+/* FRASES */
+#frase-container {
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+
+#mensaje-derecha {
+    z-index: 3;
+}
