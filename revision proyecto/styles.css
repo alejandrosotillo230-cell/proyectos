@@ -1,0 +1,55 @@
+body {
+    background-color: hsl(30, 54%, 90%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+    margin: 0;
+    padding: 40px;
+}
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Young Serif', serif;
+    color: hsl(24, 5%, 18%); /* Stone 900 */
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    margin-top: 25px;
+}
+
+.brown h2 {
+    color: hsl(14, 45%, 36%);
+}
+
+.rose h2 {
+    color: hsl(332, 51%, 32%);
+}
+
+section {
+    background-color: hsl(330, 100%, 98%); /* Rose 50 */
+    padding: 15px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+b {
+    color: hsl(24, 5%, 18%);
+}
