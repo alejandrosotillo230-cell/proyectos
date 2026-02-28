@@ -2,13 +2,8 @@ import { puedeMostrarFrases } from "./app.js";
 const container = document.getElementById("frase-container");
 
 const frases = [
-    "Te amo",
-    "Eres lo mejor que me haya paso",
     "Eres el mejor",
-    "amor mio",
-    "lo siento por todo",
     "Posdata: Me amanecí haciendo esto",
-    "mi niño",
     "❤️"
 ];
 
